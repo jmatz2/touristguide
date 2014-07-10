@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="utf-8">
+        <title>Junxiita</title>
+        <link href="jquery.mobile-1.4.3.min.css" type="text/css" rel="stylesheet">
+        <script src="jquery.js" type="text/javascript"></script>
+        <script src="jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            
+            org.apache.cordova.camera;
+            
+           function taked(){
+                alert("Ha entrao!");
+            navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI });
+           }
+
+function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+    }
+       </script>
+    </head>
+  
+        
+      </script>
+</head>
+<body>
+    
+    
+        <input type="button" value="Foto" id="take" onclick="taked()">
+   
+    
+</body>
+</html>
